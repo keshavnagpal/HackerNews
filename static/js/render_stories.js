@@ -101,7 +101,12 @@ function renderStories(topStories){
 		
 		user.innerHTML = 'by '+'<a target="_blank" href="user/'+item.by.toString()+'">'+item.by.toString()+'</a>';
 		
-		score.innerHTML = item.score.toString() + " points";
+		if(item.score==1){
+			score.innerHTML = item.score.toString() + " point";
+		}
+		else{
+			score.innerHTML = item.score.toString() + " points";
+		}
 		
 		var age_hours = Math.floor(	(today - topStories[0].time)/(3600)	);
 		var age_string = "";
