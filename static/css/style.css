@@ -1,0 +1,86 @@
+body{
+	background-color: #f6f6ef;
+}
+a{
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+#FileDate{
+	font-size: 1em;
+	padding-top: 4.5vh;
+}
+.container{
+	padding-top: 10px;
+}
+#heading{
+	color: #ff6600;
+}
+.rank{
+	display: inline;
+	text-align: left;
+}
+#searchInput:focus{
+	background-color: #f6f6ef;
+	border-bottom: 1px solid black;
+}
+.subtext, .sentiment{
+	font-size: 0.95em;
+}
+.subtext{
+	height: 1vh;
+	margin-bottom: 3vh;
+	margin-top: 0;
+	padding-top: 0;
+}
+.material-icons{
+	font-size: 1.5em;
+}
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+}
+
+.scroll {
+	border: 0;
+	border-collapse: collapse;
+}    
+.scroll tr {
+	display: flex;
+	border-bottom: none;
+}  
+
+.scroll td .hn_title{
+	flex: 1;
+	text-align: center;
+}    
+.scroll thead tr:after {
+	overflow-y: auto;
+	visibility: hidden;
+	height: 0;
+}    
+
+.scroll tbody {
+	display: block;
+	overflow-y: auto;
+	height: calc(65vh + 14vw - 80px);
+}

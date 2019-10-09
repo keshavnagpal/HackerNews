@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HackerNews</title>
+	
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="../static/css/style.css">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+	<main>
+		<div class="container">
+			
+			<div class="row headers">
+				
+				<div class=" col s12 m4">
+					<h4 id = "heading"  class="left">Hacker News</h4>	
+					
+				</div>	
+				
+			</div>
+			<div class="row">
+				
+				<div class="col s12 m12">
+					<div id = "hnLoader" class="progress">
+						<div class="indeterminate"></div>
+					</div>	
+
+					<table class="scroll">
+						<tr>
+							<td>User Name: </td><td id="user_id"><strong>{{userid}}</strong></td>
+						</tr>
+						
+						<tr>
+							<td>Karma: </td><td id="user_karma"> -- </td>
+						</tr>
+						<tr>
+							<td>Created: </td><td id="user_created"> -- </td>
+						</tr>
+						<tr>
+							<td>About: </td><td id="user_about"> -- </td>
+						</tr>
+					</table>				
+				</div>
+			</div>
+			
+		</div>
+	</main>
+	<script type="text/javascript" src="../static/js/render_user.js"></script>
+	<script type="text/javascript" src="../static/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+flask
+flask-restplus
+apscheduler==2.1.2
+aylien-apiclient
+requests

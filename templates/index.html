@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HackerNews</title>
+	
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="static/css/style.css">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+	<main>
+		<div class="container">
+			
+			<div class="row headers">
+				
+				<div class=" col s12 m4">
+					<h4 id = "heading"  class="left">Hacker News</h4>					
+				</div>
+				
+				<div class="col s12 m4">
+					<div class="input-field">
+						<input type="search" id="searchInput" onsearch="searchItem()" title="Type in a name">
+						<label for="searchInput">Search by title</label>		
+						<i class="material-icons" onclick="searchItem()">search</i>			
+					</div>	
+				</div>
+				
+				<div class = "col s12 m4">
+					<span id = "FileDate" class="grey-text right">Published by <a target="_blank" href="https://news.ycombinator.com/">Hacker News</a> on: </span>
+				</div>		
+				
+			</div>
+			
+			<div class="row">
+				<div class="col s12 m12">
+					
+					<div id = "hnLoader" class="progress">
+						<div class="indeterminate"></div>
+					</div>
+					
+					<table class="scroll" id="searchTable">		
+						<tbody id = "searchTableBody">
+							
+						</tbody>						
+					</table>	
+					
+				</div>
+			</div>
+			
+		</div>
+	</main>
+	
+	<script type="text/javascript" src="static/js/render_stories.js"></script>
+	<script type="text/javascript" src="static/js/materialize.min.js"></script>
+</body>
+</html>
