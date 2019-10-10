@@ -12,16 +12,18 @@ def getTopStoryIds(hn_url):
 def get_stories_with_sentiment_by_idlist(hn_url,id_list):
 	endpoint = hn_url+"item/{item}.json"
 	stories=[]
-	for story_id in id_list:
-		item = requests.request("GET", endpoint.format(item=story_id))
-		item = item.json()
-		
-		# Coupling - Performance trade-off | Decoupling this will add one more loop for adding sentiment
-		item['sentiment'] = getSentimentPolarity(item['title'])
-		
-		stories.append(item)
-		log(len(stories)," stories downloaded")
-		time.sleep(0.7) # To Avoid rate limit 60/minute from aylien api
+	try:
+		for story_id in id_list:
+			item = requests.request("GET", endpoint.format(item=story_id))
+			item = item.json()
+			
+			# Coupling - Performance trade-off | Decoupling this will add one more loop for adding sentiment
+			item['sentiment'] = getSentimentPolarity(item['title'])
+			stories.append(item)
+			time.sleep(0.5) # To Avoid rate limit 60/minute from aylien api
+	except Exception as ex:
+		log("Exception downloading stories: ",str(ex))
+	log(len(stories)," stories downloaded")
 	return stories
 
 def getUser(hn_url,userid):
