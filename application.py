@@ -65,7 +65,7 @@ logs = api.namespace('logs', description='Application Logs')
 class Log(Resource):
 	def get(self):
 		"""
-		Returns application logs
+		returns application logs
 		"""
 		return send_from_directory(app.root_path, application_logs_file, mimetype='text')
 
