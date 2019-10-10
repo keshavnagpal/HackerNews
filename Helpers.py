@@ -12,13 +12,13 @@ def readStories(filename):
 	return stories
 
 def saveStories(stories,filename):
-	sort_by_score = sorted(stories, key=lambda i: i['score'],reverse=True)
+	# sort_by_score = sorted(stories, key=lambda i: i['score'],reverse=True)
 	log("saving stories started")
 	today = dt.datetime.today()
-	sort_by_score[0]['FileDate'] = today.strftime('%d %b %Y')
+	stories[0]['FileDate'] = today.strftime('%d %b %Y')
 	try:
 		with open(filename, 'w') as f:
-			json.dump(sort_by_score, f)
+			json.dump(stories, f)
 	except Exception as ex:
 		log("Exception: ",str(ex))
 		return False
